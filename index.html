@@ -5,79 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indian Dance Chronicles</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: red ;color: red; }
-        header { background: red; color: white; text-align: center; padding: 2.5rem 1rem; }
-        .logo-container { text-align: center; margin-top: 10px; }
-        main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; padding-bottom: 60px; }
+        /* Base Setup */
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background: #faf9f6; 
+            color: #333333; 
+        }
         
-        /* Styling for the About section */
-        .about-section { background: #fff5e6; padding: 1.5rem; border-left: 5px solid #ff9933; margin-bottom: 2.5rem; border-radius: 4px; }
-        .about-section h2 { margin-top: 0; color: #cc6600; }
-        
-        .post-preview { background: white; padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 a { color: #138808; text-decoration: none; }
-        h2 a:hover { text-decoration: underline; }
-        footer { text-align: center; padding: 1rem; background: #333; color: white; position: fixed; bottom: 0; width: 100%; left: 0; }
-    </style>
+        /* Header Section with Floated Logo Layout */
+        header { 
+            background: #ff9933; 
+            color: white; 
+            padding: 2rem; 
+            overflow: hidden; /* Fixes layout wrap for floated elements */
+        }
+        .logo-container { 
+            float: left; 
+            margin-right: 25px; 
+        }
+        .logo-container img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 10px 0 5px 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
 
+        /* Layout Grid for Sidebar and Content */
+        main { 
+            max-width: 1100px; 
+            margin: 2rem auto; 
+            padding: 0 1rem; 
+            padding-bottom: 80px; 
+        }
+        .content-wrapper { 
+            display: flex; 
+            gap: 30px; 
+            align-items: flex-start; 
+        }
+
+        /* Sidebar Navigation Menu Styles */
+        .menu {
+            width: 25%;
+            padding: 15px;
+            border: 1px solid #ff9933;
+            background: white;
+            border-radius: 8px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .menu ul {
+            padding: 0;
+            margin: 0;
+        }
+        .menu li {
+            margin-bottom: 10px;
+            list-style-type: none; 
+        }
+        /* Styling links inside menu to look like flat buttons */
+        .menu li a {
+            display: block;
+            padding: 10px;
+            background-color: lightcoral;
+            color: aliceblue;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 2px 3px #cc5c5c;
+            transition: background 0.2s;
+        }
+        .menu li a:hover {
+            background-color: #ff9933;
+            box-shadow: 2px 3px #cc6600;
+        }
+
+        /* Main Blog Area Layout */
+        .blog-posts {
+            width: 75%;
+        }
+        
+        /* Personal About Me Card */
+        .about-section { 
+            background: #fff5e6; 
+            padding: 1.5rem; 
+            border-left: 5px solid #ff9933; 
+            margin-bottom: 2rem; 
+            border-radius: 4px; 
+        }
+        .about-section h2 { 
+            margin-top: 0; 
+            color: #cc6600; 
+        }
+        
+        /* Individual Blog Post Previews */
+        .post-preview { 
+            background: white; 
+            padding: 1.5rem; 
+            margin-bottom: 1.5rem; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        }
+        .post-preview h2 {
+            margin-top: 0;
+        }
+        .post-preview h2 a { 
+            color: #138808; 
+            text-decoration: none; 
+        }
+        .post-preview h2 a:hover { 
+            text-decoration: underline; 
+        }
+        
+        /* Sticky Footer styling */
+        footer { 
+            text-align: center; 
+            padding: 1rem 0; 
+            background: #333; 
+            color: white; 
+            position: fixed; 
+            bottom: 0; 
+            width: 100%; 
+            left: 0; 
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Header Section with integrated Floated Image -->
     <header>
-        <!-- The image is now safely inside the body tag and wrapped in quotes -->
-        <div class="menu">
-      <ul>
-        <li>Home</li>
-        <li>Cruise</li>
-        <li>The Islands</li>
-        <li>The Food</li>
-      </ul>
-    </div>
-    
-    <style>
-  .menu{
-  width: 25%;
-  float:left;
-  padding: 15px;
-  border:1px solid red;
-  color:white}
-.menu li{
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: white;
-  color: black;
-  box-shadow: 3px 4px red;}
-    </style>
-</head>
         <div class="logo-container">
-      <img src="Your paragraph text.jpg" width="200" height="200" alt="logo">
-
+            <img src="Your paragraph text.jpg" width="120" height="120" alt="logo">
         </div>
-        <style>
-          
-        </style>
         <h1>Indian Dance Chronicles</h1>
         <p>Exploring the rhythm, expressions, and heritage of India</p>
     </header>
 
     <main>
-        <!-- About Me Section -->
-        <section class="about-section">
-            <h2>Namaste, I'm a Passionate Dancer! 👋</h2>
-            <p>Welcome to my rhythmic corner of the internet. Dance is more than just movement to me; it is a way to tell stories, express deep emotions, and stay connected to cultural heritage. I created this blog to share the rich history, intricate footwork, and beautiful expressions found across the many traditional dance forms of India. Join me on this journey through rhythm and tradition!</p>
-        </section>
+        <div class="content-wrapper">
+            
+            <!-- Sidebar Navigation Menu with Working Links -->
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="bharatanatyam.html">Bharatanatyam</a></li>
+                    <li><a href="kathak.html">Kathak</a></li>
+                    <li><a href="https://github.com" target="_blank">⚙️ GitHub</a></li>
+                </ul>
+            </div>
 
-        <!-- Blog Posts Section -->
-        <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px;">Latest Blog Posts</h2>
-        
-        <div class="post-preview">
-            <h2><a href="bharatanatyam.html">Bharatanatyam: The Fire of Tamil Nadu</a></h2>
-            <p>Discover the oldest classical dance form of India, known for its dynamic hand gestures (mudras) and geometric precision.</p>
-        </div>
+            <!-- Blog Posts and About Me Column -->
+            <div class="blog-posts">
+                
+                <!-- Personal About Me Section -->
+                <section class="about-section">
+                    <h2>Namaste, I'm a Passionate Dancer! 👋</h2>
+                    <p>Welcome to my rhythmic corner of the internet. Dance is more than just movement to me; it is a way to tell stories, express deep emotions, and stay connected to cultural heritage. I created this blog to share the rich history, intricate footwork, and beautiful expressions found across the many traditional dance forms of India. Join me on this journey through rhythm and tradition!</p>
+                </section>
 
-        <div class="post-preview">
-            <h2><a href="kathak.html">Kathak: The Art of Storytelling</a></h2>
-            <p>Explore North India's rhythmic marvel, featuring swift pirouettes, intricate footwork, and historical narratives.</p>
+                <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 2rem;">Latest Blog Posts</h2>
+                
+                <!-- Blog Entry 1 -->
+                <div class="post-preview">
+                    <h2><a href="bharatanatyam.html">Bharatanatyam: The Fire of Tamil Nadu</a></h2>
+                    <p>Discover the oldest classical dance form of India, known for its dynamic hand gestures (mudras) and geometric precision.</p>
+                </div>
+
+                <!-- Blog Entry 2 -->
+                <div class="post-preview">
+                    <h2><a href="kathak.html">Kathak: The Art of Storytelling</a></h2>
+                    <p>Explore North India's rhythmic marvel, featuring swift pirouettes, intricate footwork, and historical narratives.</p>
+                </div>
+                
+            </div>
+
         </div>
     </main>
 
@@ -87,4 +196,3 @@
 
 </body>
 </html>
-
